@@ -24,53 +24,12 @@ a {
 h1 {
 	color: white;
 }
+video, img {
+  pointer-events: none;
+}
 </style>
 </head>
 <body>
-        <script>
-            var f = ['G', 'GE', 'GEN', 'GENU', 'GENUI', 'GENUIN', 'GENUINU', 'GENUINE-', 'GENUINE-Y', 'GENUINE-YO', 'GENUINE-YOU'],
-                d = [0],
-                m = 0;
-
-            function loop() {
-                var s = '', x = 0;
-
-                if (!m) {
-                    while (d[x] == 4) {
-                        x ++;
-                    }
-
-                    if (x >= d.length) m = 1;
-                    else {
-                        d[x] ++;
-                    }
-                }
-                else {
-                    while (d[x] == 0) {
-                        x ++;
-                    }
-
-                    if (x >= d.length) m = 0;
-                    else {
-                        d[x] ++;
-// change this value under here to total spaces used in url bar (☆ symbol counts as 4)
-                        if (d[x] == 11) d[x] = 0;
-                    }
-                }
-
-                d.forEach(function (n) {
-                    s += f[n];
-                });
-
-                location.hash = s;
-
-                setTimeout(loop, 400);
-            }
-
-            window.addEventListener('load', function () {
-                loop();
-            });
-        </script>
 	<section class="main style1 fullscreen">
 
  		<!--<img src="my-image.jpg" class="image">-->
